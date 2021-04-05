@@ -1,0 +1,16 @@
+;(function($, window, document, undefined) {
+    var $win = $(window);
+    var $doc = $(document);
+
+    $doc.ready(function() {
+		if ( Cookies.get('sq-get-quotes-close') ) {
+			$('.sq_get_quotes').remove();
+		}
+		$('.close-link').on( 'click', function(event){
+			event.preventDefault();
+			Cookies.set( 'sq-get-quotes-close', true, { expires: 7 });
+			$('.sq_get_quotes').slideToggle('fast');
+		} );
+    });
+
+})(jQuery, window, document);

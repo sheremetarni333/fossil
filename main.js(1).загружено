@@ -1,0 +1,78 @@
+const $ = jQuery
+
+$(function () {
+  $(window).resize(function () {
+    const $width = $(window).width()
+    const widthBreak = $width <= 960
+    const display = widthBreak ? "none" : "flex"
+    const $siteButtons = $(".site-buttons")
+
+    $siteButtons.css("display", display)
+  })
+
+  $("button.menu-toggle").off("click")
+  $("button.menu-toggle").click(function (e) {
+    $("#genesis-nav-primary").toggle()
+
+    $(this).toggleClass("activated")
+  })
+
+  $("#header-search-button").click(function (e) {
+    $("#header-search-form").toggle()
+    // $("#header-search-button").hide()
+
+    const $iconEle = $("#header-search-button span")
+    const $siteButtons = $(".site-buttons")
+    const $width = $(window).width()
+    const widthBreak = $width <= 960
+    const display = widthBreak ? "none" : "flex"
+
+    if ($iconEle.hasClass("dashicons-search")) {
+      $iconEle.removeClass("dashicons-search")
+      $iconEle.addClass("dashicons-no-alt")
+
+      $siteButtons.hide()
+    } else {
+      $iconEle.addClass("dashicons-search")
+      $iconEle.removeClass("dashicons-no-alt")
+
+      if (!widthBreak) {
+        $siteButtons.css("display", display)
+      }
+    }
+  })
+
+  // add submenu title
+  $("<li class='category-title'>Other topics</li>").insertBefore(
+    $("#menu-item-158540")
+  )
+  // Insert Podcasts label
+  // $("<li class='category-title'>Podcasts</li>").insertBefore(
+  //   $("#menu-item-158874")
+  // )
+
+  // move hero stories
+  $(".hero-stories .gb-post-grid-items").append(
+    "<div class='hero-container'></div>"
+  )
+  $(".hero-container").append($(".hero-stories article").not(":first"))
+  $("#new-hero-stories").append($(".hero-stories"))
+
+  // add disqus link
+  $(".hero-stories article").each(function () {
+    const link = $(this).find(".gb-block-post-grid-title a").attr("href")
+    $(this)
+      .find(".gb-block-post-grid-byline")
+      .append(`<a class='comment-link' href='${link}#disqus_thread'>0</>`)
+  })
+
+  $(".site-header").append($("#genesis-nav-primary"))
+
+  setTimeout(() => {
+    $(".site-header").css("opacity", "1")
+  }, 100)
+
+  setTimeout(() => {
+    $(".site-inner").css("opacity", "1")
+  }, 200)
+})

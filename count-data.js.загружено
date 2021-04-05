@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"and","comments":{"zero":"0","multiple":"{num}","one":"1"}},"counts":[{"id":"https:\/\/reneweconomy.com.au\/solar-insiders-podcast-why-switching-off-rooftop-solar-is-a-good-thing\/","comments":0},{"id":"https:\/\/reneweconomy.com.au\/the-driven-podcast-why-australias-big-utilities-are-plugging-into-evs\/","comments":0},{"id":"https:\/\/reneweconomy.com.au\/video-why-dont-coalition-ministers-visit-wind-and-solar-farms\/","comments":14},{"id":"https:\/\/reneweconomy.com.au\/energy-insiders-podcast-solar-tax-aemcs-benn-barr-on-new-export-rule\/","comments":8},{"id":"https:\/\/reneweconomy.com.au\/energy-insiders-podcast-solar-eclipse-and-can-evs-really-provide-storage-on-wheels\/","comments":0},{"id":"https:\/\/reneweconomy.com.au\/chart-of-the-day-plummeting-battery-costs-defy-expectations\/","comments":13},{"id":"https:\/\/reneweconomy.com.au\/bitcoin-is-a-mouth-hungry-for-fossil-fuels\/","comments":7}]});
+}

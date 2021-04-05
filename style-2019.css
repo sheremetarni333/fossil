@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
+
+.sq_get_quotes * { padding: 0; margin: 0; outline: 0; box-sizing: border-box; }
+
+.sq_get_quotes *:before,
+.sq_get_quotes *:after { box-sizing: inherit; }
+
+.sq_get_quotes .hidden { display: none; }
+
+/* ------------------------------------------------------------ *\
+	Subscribe Bar
+\* ------------------------------------------------------------ */
+
+.sq_get_quotes { position: fixed; bottom: 0; width: 100%; height: 80px; background: #fff; z-index: 999; }
+
+.sq_get_quotes .shell { max-width: 1026px; margin-left: auto; margin-right: auto; height: 100%; padding: 0 18px; display: flex; justify-content: flex-start; align-items: center; }
+
+.sq_get_quotes .sq_get_quotes__head { width: 30%; }
+.sq_get_quotes .sq_get_quotes__body { width: 50%; position: relative; }
+.sq_get_quotes .sq_get_quotes__foot { width: 20%; display: flex; justify-content: flex-end; align-items: center; height: 100%; }
+
+.sq_get_quotes .sq_get_quotes__head h5 { margin-bottom: 0; font-family: "HelveticaPMGA", sans-serif; font-size: 13px; color: #000; }
+
+.sq_get_quotes .sq_get_quotes__error { color: #be1e2d; font-size: 12px; position: absolute; margin-top: 7px; }
+
+.sq_get_quotes .sq_get_quotes__load { position: absolute; margin-top: 3px; }
+
+.sq_get_quotes .sq_get_quotes__success { text-align: center; }
+.sq_get_quotes .sq_get_quotes__success h4 { font-family: "HelveticaPMGA", sans-serif; font-size: 16px; }
+
+@media( max-width: 767px ) {
+    .sq_get_quotes .shell {flex-direction: column;justify-content: center;}
+    .sq_get_quotes .sq_get_quotes__head { width: 100%; margin-bottom: 25px; text-align: center; }
+    .sq_get_quotes .sq_get_quotes__body { width: 100%; }
+    .sq_get_quotes .sq_get_quotes__body form { margin-left: auto; margin-right: auto; }
+    .sq_get_quotes .sq_get_quotes__foot { position: absolute; width: 100%; align-items: flex-start; }
+}
+
+
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.sq_subscription-form { width: 81%; }
+
+.sq_subscription-form .sq_get_quotes__field { width: 67%; height: 38px; padding-left: 15px; display: inline-block; border: none; background-color: #eaeaea; color: #7f7f7f; font-size: 12px; font-family: "HelveticaPMGA", sans-serif; }
+.sq_subscription-form .sq_get_quotes__field::placeholder { color: #7f7f7f; }
+.sq_subscription-form .sq_get_quotes__field:focus { color: #7f7f7f; }
+
+.sq_subscription-form .sq_get_quotes__btn { width: 30%; height: 38px; margin-left: -3px; border: none; background-color: #be1e2d; color: #fff; text-transform: uppercase; font-size: 13px; }
+.sq_subscription-form .sq_get_quotes__btn:hover { background-color: #cc0000; }
+
+.sq_close-link { width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; }
+.sq_close-link:hover { background: #f6f6f6; border-radius: 50%; }
+
+/* ------------------------------------------------------------ *\
+	Subscribe
+\* ------------------------------------------------------------ */
+
+body > .sq_get_quotes { font-family: "HelveticaPMGA",sans-serif; -webkit-box-shadow: 0 -4px 21px rgba(36, 159, 217, 0.15); box-shadow: 0 -4px 21px rgba(36, 159, 217, 0.15); }
+
+.sq_get_quotes .sq_get_quotes__head { padding-right: 12px; width: 24%; }
+.sq_get_quotes .sq_get_quotes__head h5 { font-size: 13px; line-height: 1.31; font-weight: normal; letter-spacing: 0; }
+
+.sq_get_quotes .sq_get_quotes__body { width: calc(75% - 60px); }
+
+.sq_get_quotes .sq_subscription-form { width: auto; max-width: 405px; position: relative; margin: auto;}
+.sq_get_quotes .sq_subscription-form .sq_get_quotes__btn { font-size: 13px; line-height: 1.31; -webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s; width: 135px; position: absolute; top: 0; right: 0; border-radius: 0; }
+.sq_get_quotes .sq_subscription-form .sq_get_quotes__field { width: 100%; padding-right: 150px; padding: 8px 150px 8px 15px; border-radius: 0; }
+
+.sq_get_quotes .shell .sq_get_quotes__foot { width: 60px; padding-left: 20px; }
+.sq_get_quotes .shell .sq_get_quotes__foot .close-link { width: 40px; height: 40px; padding: 0px; text-align: center; display:flex; background: #f6f6f6; border-radius: 50%; -webkit-transition: background .3s, -webkit-transform .3s; transition: background .3s, -webkit-transform .3s; -o-transition: background .3s, transform .3s; transition: background .3s, transform .3s; transition: background .3s, transform .3s, -webkit-transform .3s; }
+.sq_get_quotes .shell .sq_get_quotes__foot .close-link img { align-self: center; margin: auto; }
+.sq_get_quotes .shell .sq_get_quotes__foot .close-link:hover { background: #eaeaea; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+.sq_get_quotes input[type=number]::-webkit-inner-spin-button, .sq_get_quotes input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.sq_get_quotes .sq-logo-container{width: 240px;}
+.sq_get_quotes .sq-logo-container img{ max-width: 100%; height: auto;}
+
+
+@media (max-width: 1023px) {
+    .sq_get_quotes .sq_get_quotes__head h5 { white-space: normal; }
+    body .sq_get_quotes .sq_get_quotes__head { width: calc(100% - 475px); }
+    body .sq_get_quotes .sq_get_quotes__body { width: 405px; max-width: 100%; }
+    .sq_get_quotes .sq-logo-container{ margin-left: 20px;}
+}
+
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+    .sq_get_quotes .sq_get_quotes__head { width: auto; margin: 8px auto 12px; padding: 0; min-width: 250px; }
+
+    .sq_get_quotes .sq_get_quotes__body { width: 100%; }
+    .sq_get_quotes .sq_subscription-form { width: 100%; }
+
+    .sq_get_quotes .sq_get_quotes__foot { right: 9px; top: 7px; max-width: 100%; }
+    .sq_get_quotes .shell .sq_get_quotes__foot .close-link { width: 30px; height: 30px; padding-top: 2px; }
+    .sq_get_quotes .sq-logo-container{ margin-left: 20px;}
+}
+
+@media (max-width: 767px) {
+    div.sq_get_quotes div.shell { flex-direction: initial; padding-top: 20px; }
+    .sq_get_quotes__head { display: none; }
+    div.sq_get_quotes__body { width: calc(50% + 10px)!important;min-width: 100%;box-sizing: border-box; padding-right: 0px; }
+    .sq_get_quotes__body input { max-height: 30px; }
+    .sq_get_quotes__body input[type="submit"]{width: auto !important; padding: 0px 15px !important; max-width: 120px; }
+    .sq_get_quotes__body input#postcode{flex-grow: 2; padding: 0px 10px !important; padding-right: 120px !important; }
+    .sq-logo-container { width: calc(50% - 80px)!important; margin-left: 30px!important; margin-right: 40px!important; padding-top: 10px; position: absolute; }
+    div.sq-logo-container { top: 5px; left: 20px; max-width: 110px; margin: 0 !important; padding: 0; }
+    .sq-logo-container img { width: 100%; }
+    .sq_get_quotes__field, .sq_get_quotes__btn { width: 50%!important; }
+    .sq_get_quotes .sq_subscription-form .sq_get_quotes__field { padding-right: 15px!important }
+    div.sq_get_quotes .sq_subscription-form .sq_get_quotes__btn {font-size: 12px; appearance: none; -webkit-appearance: none; }
+    .sq_get_quotes__body .sq_subscription-form{display: flex;}
+    .sq_get_quotes__btn {letter-spacing: 0px!important; padding: 0!important}
+    div.sq_get_quotes__foot {top: 3px !important;padding: 0 !important;margin: 0 !important;}
+}
+
+@media (max-width: 400px) {
+    .sq-logo-container {width: calc(50% - 40px)!important; margin-left: 10px!important; margin-right: 20px!important; padding-top: 0px; margin-top: -5px}
+    .sq_get_quotes__foot { padding-top: 20px!important; }
+}
+
+input#postcode[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input#postcode[type="number"] {
+    -moz-appearance: textfield;
+}
